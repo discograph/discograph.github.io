@@ -1,0 +1,86 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{% if page.ogtitle %}{{ page.ogtitle }}{% else %}{{ page.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.ogdescription %}{{ page.ogdescription }}{% else %}{{ page.description }}{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/public/img/{{ page.ogimage }}">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{% if page.url == '/' %}{{ site.description }}{% else %}{{ page.description }}. {{ page.ogdescription }}{% endif %}">
+  <meta name="keywords" content="{{ page.keywords | join: ', ' }}"/>
+  <meta name="google-site-verification" content="_X6oew9Xos2SosIaKFlm4rMv4p9UHq6iMwyBHScl2Hk" />
+  <meta name="yandex-verification" content="29f61831ed3c04ca" />
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css?v=202105250">
+  <style>
+  @font-face {
+      font-family: 'novitonovathin';
+      src: url('/schedule/novitonova-thin.woff2') format('woff2'), url('/schedule/novitonova-thin.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDujMR6WR.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuHMR6WR.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }    
+  /* latin-ext */
+  @font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuvMR6WR.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMRw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  </style>
+  <script type="application/ld+json">{
+   "sameAs":[
+      "{{ site.social.links || join: '", "' }}"
+   ],
+   "@type":"WebSite",
+   "image":"{{ site.url }}{{ site.logo }}",
+   "url":"{{ site.origin }}",
+   "publisher":{
+      "@type":"Organization",
+      "logo":{
+         "@type":"ImageObject",
+         "url":"{{ site.url }}{{ site.logo }}"
+      }
+   },
+   "name":"{{ site.title }}",
+   "headline":"{{ site.headline }}",
+   "description":"{{ site.description }}",
+   "@context":"https://schema.org"
+  }</script>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
